@@ -80,8 +80,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
-  padding: 100px;
+  gap: 25%;
   background-image: url('imgs/fondo_tecnologia.png'); /* Cambia el nombre del archivo según corresponda */
   background-size: cover;
   background-position: center;
