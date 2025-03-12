@@ -44,13 +44,11 @@ body {
 .modal-header {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .header-image {
   width: 100%;
-  height: 460px;
-  border-radius: 5px;
+  height: auto;
 }
 
 .close-button {
@@ -75,7 +73,7 @@ body {
 }
 
 .close-button .material-icons {
-  font-size: 64px;
+  font-size: 40px;
 }
 
 .icon-container {
@@ -83,7 +81,12 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  padding: 60px;
+  padding: 100px;
+  background-image: url('imgs/fondo_tecnologia.png'); /* Cambia el nombre del archivo según corresponda */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .icon-item {
@@ -103,7 +106,7 @@ body {
 }
 
 .icon-item .material-icons {
-  font-size: 200px;
+  font-size: 100px;
   margin-bottom: 10px;
   color: #3498db;
 }
@@ -215,5 +218,5 @@ body {
 
 #page-counter {
   color: white;
-  font-size: 55px;
+  font-size: 30px;
 }
