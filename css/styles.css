@@ -152,7 +152,7 @@ body {
 
 .right-centered-image {
   position: absolute;
-  right: 1px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   width: 8%; /* Ajusta el tamaño según sea necesario */
