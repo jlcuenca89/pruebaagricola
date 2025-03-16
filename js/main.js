@@ -1,19 +1,19 @@
 // Sample PDF data (URLs to PDF files)
 const galleries = [
   [
-    'pdfs/agro.pdf',
+    'pdfs/agro_herbi.pdf',
   ],
   [
-    'pdfs/agro2.pdf',
+    'pdfs/agro_insec.pdf',
   ],
   [
-    'pdfs/agro3.pdf',
+    'pdfs/agro_fungi.pdf',
   ],
   [
-    'pdfs/agro4.pdf',
+    'pdfs/agro_acari.pdf',
   ],
   [
-    'pdfs/agro5.pdf',
+    'pdfs/agro_otros.pdf',
   ]
 ];
 
@@ -26,7 +26,7 @@ let pdfScale = 1.5;
 // Load the PDF
 async function loadPDF(pdfUrl) {
   try {
-    console.log('Loading PDF:', pdfUrl); // Para debuggear
+    console.log('Loading PDF:', pdfUrl);
     const loadingTask = pdfjsLib.getDocument(pdfUrl);
     pdfDoc = await loadingTask.promise;
     pageNum = 1;
@@ -38,8 +38,6 @@ async function loadPDF(pdfUrl) {
   }
 }
 
-
-// Render the PDF page
 async function renderPage() {
   try {
     const page = await pdfDoc.getPage(pageNum);
@@ -60,7 +58,7 @@ async function renderPage() {
     console.error('Error rendering page:', error);
   }
 }
-// Modificar la función openPdfViewer para incluir más logs
+
 function openPdfViewer(galleryIndex) {
   try {
     console.log('Opening gallery:', galleryIndex); // Para debuggear
@@ -94,12 +92,10 @@ function nextPage() {
   renderPage();
 }
 
-// Event listener for background click
 document.querySelector('.background-container').addEventListener('click', () => {
   document.getElementById('mainModal').style.display = 'block';
 });
 
-// Modal control functions
 function closeModal(modalId) {
   document.getElementById(modalId).style.display = 'none';
 }
@@ -121,7 +117,6 @@ function navigatePdfs(direction) {
   loadPDF(galleries[currentGallery][currentPdf]);
 }
 
-// Close modals when clicking outside
 window.onclick = function(event) {
   const mainModal = document.getElementById('mainModal');
   const pdfModal = document.getElementById('pdfModal');
@@ -132,6 +127,5 @@ window.onclick = function(event) {
   }
 }
 
-// Add event listeners for navigation buttons
 document.querySelector('.prev').addEventListener('click', prevPage);
 document.querySelector('.next').addEventListener('click', nextPage);

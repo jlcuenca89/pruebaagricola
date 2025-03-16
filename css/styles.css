@@ -226,8 +226,8 @@ body {
 
 .pdf-controls {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
   background: rgba(0,0,0,0.2);
   border-radius: 0 0 10px 10px;
   width: 100%;
